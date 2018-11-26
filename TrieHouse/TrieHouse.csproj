@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="TitleOnlyEnglishWiktionaryList.txt" />
+    <None Remove="words.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="TitleOnlyEnglishWiktionaryList.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="words.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TrieNet\TrieNet.csproj" />
+  </ItemGroup>
+
+</Project>
